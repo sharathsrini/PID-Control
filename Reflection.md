@@ -11,6 +11,15 @@ An Integrator "saves the day" by accumulating the error over time and therefore 
 
 Here is a situation that neither proportional nor integral control fails. It is the  rapid changes to the system that comes from an external source. Keeping the system steady when outside influences are making it change abruptly is the job of derivative control. In calculus, derivative is an operation that measures the rate of change of a curve, such as the error curve . By taking action based on the rate the error is changing, the output drive can respond rapidly to disturbances to the system.Although ∆t might be a small or a large value, so long as it's always the same interval, the derivative constant, Kd can be scaled to compensate for the fact that we made ∆t equal to 1. The rate that the errors are sampled also has to be faster than the error signal's tendency to change.
 
+### The Vale of the PID Controlletrs Parameters:
+```
+  pid.Init(0.15, 0.0001, 2.0);
+  pid_throttle.Init(0.2, 0.0, 2.0);
+ 
+```
+The Values were concluded based on the hit and trail methoed. The Steering angle is controlled using a PID controller whereas the the throttle is controlled using a PD contoller.
+
+
 ### A Python Class of PID Controller:
 ```
 class PID:
