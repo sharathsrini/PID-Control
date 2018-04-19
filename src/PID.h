@@ -6,9 +6,9 @@ public:
   /*
   * Errors
   */
-  double p_error;
-  double i_error;
-  double d_error;
+  double propotional_error;
+  double integral_error;
+  double derivative_error;
 
   /*
   * Coefficients
@@ -16,6 +16,11 @@ public:
   double Kp;
   double Ki;
   double Kd;
+
+  /*
+   * Helper
+   */
+  bool first;
 
   /*
   * Constructor
